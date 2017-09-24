@@ -27,6 +27,6 @@ classInformation(Student, Class, Room, Time) :-
 	day(Room, Time).
 	
 subjectInformation(Subject, Teacher, Points) :-
-	teacher(Subject, Teacher),
+	teacher(Teacher, Subject),
 	ects(Subject, Points).
 
