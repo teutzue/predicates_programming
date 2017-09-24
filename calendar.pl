@@ -5,6 +5,9 @@ schedule(frederik, mathematics).
 schedule(teodor, mathematics).
 schedule(adam, mathematics).
 
+teacher(Annas, mathematics).
+teacher(Sofus, programming).
+
 location(programming, room203).
 location(business, room205).
 location(mathematics, room104).
@@ -23,7 +26,7 @@ classInformation(Student, Class, Room, Time) :-
 	location(Class, Room),
 	day(Room, Time).
 	
-subjectInformation(Subject, Room, Points) :-
-	location(Subject, Room),
+subjectInformation(Subject, Teacher, Points) :-
+	teacher(Subject, Teacher),
 	ects(Subject, Points).
 
